@@ -1,0 +1,310 @@
+body {
+    background-color: #D9C6B2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url('../Images/baby-hawk.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #5b4534;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+nav p {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; 
+}
+
+nav a:hover {
+    background-color: #D9C6B2;
+    color: #5b4534;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.contact h1 {
+    margin: 0;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.Animals {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.Animals div.animal-container {
+    border: 2px solid #8B4513;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #D9C6B2;
+}
+
+.Animals img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.Animals .description {
+    border: 1px solid #8B4513;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f3e3;
+    font-size: 1em;
+    color: #333;
+}
+
+@media (min-width: 600px) {
+    .Animals {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .Animals {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.colorful {
+    text-align: center;
+    color: black;
+    text-shadow: 0 0 5px #5b4534;
+}
+
+.phone-number {
+    background-color: #5b4534;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.contact-info {
+    color: #5b4534;
+    text-decoration: none;
+}
+
+.contact-info:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #5b4534; 
+    color: white; 
+    text-align: center; 
+    padding: 20px; 
+    width: 100%; 
+    border-top: 3px solid white; 
+    border-bottom: 3px solid white; 
+    margin-top: auto;
+}
+
+.responsive-image {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    float: left;
+    padding-right: 20px;
+}
+
+@media only screen and (min-width: 769px) {
+    nav p {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+
+    nav a:hover {
+        background-color: #D9C6B2;
+        color: #5b4534;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-image: none;
+        background-color: #D9C6B2;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+    }
+
+    header::before {
+        content: "🐾 Wild Rescues \A Rescue. Rehabilitate. Release.";
+        font-size: 20px;
+        font-style: italic;
+        font-weight: bold;
+        color: #5b4534;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        position: absolute;
+        top: 10px;
+        white-space: pre-line;
+    }
+
+    nav p {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+        padding: 20px;
+        display: inline-block;
+    }
+
+    nav a {
+        border-bottom: 1px solid white;
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        display: inline-block;
+    }
+
+    nav a:hover {
+        background-color: #D9C6B2;
+    }
+
+    header p {
+        font-size: 16px;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+    header {
+        height: 25vh; 
+        padding: 15px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header::before {
+        font-size: 22px; 
+    }
+
+    nav p {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .contact {
+        margin: 30px;
+    }
+
+    footer {
+        padding: 25px;
+    }
+
+    .racoon-image {
+        max-width: 100%;
+        height: auto;
+        float: left;
+        padding-right: 20px;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .image-container {
+        display: block;
+        text-align: left;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        color: black;
+        background-color: #D9C6B2;
+    }
+
+    header {
+        background-image: url('../Images/baby-hawk.jpg');
+        background-size: cover;
+        background-color: #D9C6B2;
+        color: #5b4534;
+        height: 70vh;
+        border: none;
+    }
+
+    nav {
+        display: block;
+        background-color: #5b4534;
+        color: white;
+    }
+
+    nav a {
+        color: white;
+    }
+
+    .contact {
+        margin: 0;
+        color: #5b4534;
+    }
+
+    footer {
+        background-color: #5b4534;
+        color: white;
+    }
+
+    .responsive-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .no-print {
+        display: block;
+    }
+}
